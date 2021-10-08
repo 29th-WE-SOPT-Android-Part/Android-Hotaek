@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SOPT29Assignment</string>
+    <string name="sopt_hub">SOPTHub</string>
+    <string name="login">로그인</string>
+    <string name='id'>아이디</string>
+    <string name='password'>비밀번호</string>
+    <string name="input_id">아이디를 입력해주세요</string>
+    <string name="input_password">비밀번호를 입력해주세요</string>
+    <string name="sign_up">회원가입</string>
+    <string name="name">이름 </string>
+    <string name="age">나이 </string>
+    <string name="mbti">MBTI</string>
+    <string name="introduce"> 안녕하세요!! </string>
+    <string name="input_name">이름을 입력해주세요</string>
+    <string name="complete_signup">회원가입 완료</string>
+</resources>
