@@ -51,11 +51,11 @@
 
    ## 2.실행 영상
 
-   <video src="C:\Users\kht07\Videos\Captures\Android Emulator - Pixel_3_XL_API_28_5554 2021-10-10 15-03-53.mp4"></video>
+   <img src="https://user-images.githubusercontent.com/71322949/137090899-6d40da30-9398-4f80-b777-25b0fccc474a.gif"></image>
 
 
 
-# 코드 설명 LEVEL - 2
+## 2. LEVEL 2
 
 ### 2 - 1
 
@@ -285,4 +285,4 @@ button.setOnCLickListener(){
 
 ## 3. 느낀점
 
-백스택 관리 하면서 화면 전환 시에 finish()가 아닌 transaction을 사용했었는데 이번 과제를 하면서 백스택 관리 부분에서 finish()를 활용해야겠다고 새롭게 배웠습니다!
+평소 사용했을때 setOnClickListener()를 아무 생각없이 사용했었는데 과제를 통해 새롭게 왜 사용이 가능한지에 대해서 알게 됐고, Activity에서 이동할때 finish가 아닌 intent만을 이용해서 화면 전환을 했었는데, finish라는 것을 새롭게 배웠습니다!! 그리고 registerforActivityResult 사용법에 대해서 익혔고, contracts의 종류가 되게 많고, 이를 나중에 카메라 권한을 얻을 때 사용하면 되겠다 라는 점에서 좋은 공부였습니다!
