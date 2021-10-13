@@ -1,22 +1,23 @@
-package org.sopt.myapplication
+package org.sopt.myapplication.ui
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import org.sopt.myapplication.ui.HomeActivity
+import org.sopt.myapplication.R
 import org.sopt.myapplication.databinding.ActivitySigninBinding
+import org.sopt.myapplication.ui.base.BaseActivity
 
-class SignInActivity : AppCompatActivity() {
-    private lateinit var binding : ActivitySigninBinding
+class SignInActivity : BaseActivity<ActivitySigninBinding>(R.layout.activity_signin) {
     private lateinit var resultLauncher: ActivityResultLauncher<Intent>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySigninBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+
         clickLogin()
         clickSignUp()
         setResultSignUp()

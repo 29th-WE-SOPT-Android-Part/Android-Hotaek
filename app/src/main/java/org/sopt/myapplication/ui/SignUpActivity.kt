@@ -1,19 +1,18 @@
-package org.sopt.myapplication
+package org.sopt.myapplication.ui
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import org.sopt.myapplication.R
 import org.sopt.myapplication.databinding.ActivitySignUpBinding
+import org.sopt.myapplication.ui.base.BaseActivity
 
-class SignUpActivity : AppCompatActivity() {
-    lateinit var binding : ActivitySignUpBinding
+class SignUpActivity : BaseActivity<ActivitySignUpBinding>(R.layout.activity_sign_up) {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySignUpBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+
         clickSignUp()
     }
 
