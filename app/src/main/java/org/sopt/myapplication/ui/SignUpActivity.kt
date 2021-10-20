@@ -20,7 +20,7 @@ class SignUpActivity : BaseActivity<ActivitySignUpBinding>(R.layout.activity_sig
     private fun clickSignUp(){
         with(binding){
             btnSignup.setOnClickListener {
-                if(etSignupId.length() == 0 || etSignupName.length() == 0 || etSingupPassword.length() == 0){
+                if(etSignupId.text.isNullOrBlank() || etSignupName.text.isNullOrBlank() || etSingupPassword.text.isNullOrBlank()){
                     Toast.makeText(this@SignUpActivity, "입력하지 않은 정보가 있습니다.", Toast.LENGTH_SHORT).show()
                 } else {
                     val intent = Intent(this@SignUpActivity, SignInActivity::class.java)

@@ -40,11 +40,17 @@ class SignInActivity : BaseActivity<ActivitySigninBinding>(R.layout.activity_sig
 
 
     private fun clickLogin(){
-        binding.btnLogin.setOnClickListener {
-            Toast.makeText(this, "곽호택님 환영합니다", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+        with(binding){
+            btnLogin.setOnClickListener {
+                if(etId.text.isNullOrBlank() || etPassword.text.isNullOrBlank()){
+                    Toast.makeText(this@SignInActivity, "입력되지 않은 정보가 있습니다.", Toast.LENGTH_SHORT).show()
+                }
+                Toast.makeText(this@SignInActivity, "곽호택님 환영합니다", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@SignInActivity, HomeActivity::class.java)
+                startActivity(intent)
+            }
         }
+
     }
 
     private fun clickSignUp(){
