@@ -12,7 +12,9 @@
         <entry key="..\:/Android-Hotaek/app/src/main/res/layout/activity_sign_up.xml" value="0.25364583333333335" />
         <entry key="..\:/Android-Hotaek/app/src/main/res/layout/activity_signin.xml" value="0.25364583333333335" />
         <entry key="..\:/Android-Hotaek/app/src/main/res/layout/fragment_follower.xml" value="0.25364583333333335" />
+        <entry key="..\:/Android-Hotaek/app/src/main/res/layout/fragment_repository.xml" value="0.11510416666666666" />
         <entry key="..\:/Android-Hotaek/app/src/main/res/layout/item_follower.xml" value="0.264" />
+        <entry key="..\:/Android-Hotaek/app/src/main/res/layout/item_repository.xml" value="0.38461538461538464" />
       </map>
     </option>
   </component>

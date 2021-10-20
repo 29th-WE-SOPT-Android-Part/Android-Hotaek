@@ -34,6 +34,10 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
             btnFollower.setOnClickListener {
                 changeFragment(R.id.fragment_container_recycler, FollowerFragment())
             }
+
+            btnRepository.setOnClickListener {
+                changeFragment(R.id.fragment_container_recycler, RepositoryFragment())
+            }
         }
 
     }
