@@ -46,6 +46,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="@{follow.introduce}"
+                android:maxLines="2"
+                android:ellipsize="end"
                 app:layout_constraintStart_toStartOf="@+id/text_name"
                 app:layout_constraintTop_toBottomOf="@+id/text_name" />
 

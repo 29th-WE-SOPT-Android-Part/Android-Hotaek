@@ -1,14 +1,19 @@
 package org.sopt.myapplication.ui.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import org.sopt.myapplication.data.FollowData
 import org.sopt.myapplication.databinding.ItemFollowerBinding
+import org.sopt.myapplication.ui.DetailActivity
+import java.util.*
 
 class FollowAdapter : RecyclerView.Adapter<FollowAdapter.FollowViewHolder>() {
-    private val _followData = mutableListOf<FollowData>()
-    private var followData : List<FollowData> = _followData
+
+    private var followData = mutableListOf<FollowData>()
 
 
     override fun onCreateViewHolder(
@@ -26,6 +31,14 @@ class FollowAdapter : RecyclerView.Adapter<FollowAdapter.FollowViewHolder>() {
 
     override fun onBindViewHolder(holder: FollowAdapter.FollowViewHolder, position: Int) {
         holder.onBind(followData[position])
+        holder.binding.root.setOnClickListener {
+            val intent = Intent(holder.itemView?.context, DetailActivity::class.java)
+            intent.putExtra("userImage", followData[position].image)
+            intent.putExtra("userName", followData[position].name)
+            intent.putExtra("userIntroduce", followData[position].introduce)
+            startActivity(holder.itemView.context, intent, null)
+
+        }
     }
 
     override fun getItemCount(): Int {
@@ -39,12 +52,25 @@ class FollowAdapter : RecyclerView.Adapter<FollowAdapter.FollowViewHolder>() {
             binding.apply{
                 follow = followData
                 binding.executePendingBindings()
+
+
             }
+
         }
     }
 
-    fun setFollowData(followData: List<FollowData>){
+    fun setFollowData(followData: MutableList<FollowData>){
         this.followData = followData
         notifyDataSetChanged()
+    }
+
+    fun removeData(position: Int){
+        followData.removeAt(position)
+        notifyItemRemoved(position)
+    }
+
+    fun swapData(fromPos: Int, toPos: Int){
+        Collections.swap(followData, fromPos, toPos)
+        notifyItemMoved(fromPos, toPos)
     }
 }
