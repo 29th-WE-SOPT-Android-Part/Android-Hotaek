@@ -1,9 +1,8 @@
-package org.sopt.myapplication.ui
+package org.sopt.myapplication.ui.sign
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import org.sopt.myapplication.R
 import org.sopt.myapplication.databinding.ActivitySignUpBinding
 import org.sopt.myapplication.ui.base.BaseActivity

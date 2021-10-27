@@ -1,4 +1,4 @@
-package org.sopt.myapplication.ui
+package org.sopt.myapplication.ui.detail
 
 import android.os.Bundle
 import android.util.Log

@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.DetailActivity">
+        tools:context=".ui.detail.DetailActivity">
 
         <TextView
             android:id="@+id/text_detail_title"

@@ -1,4 +1,4 @@
-package org.sopt.myapplication.ui
+package org.sopt.myapplication.ui.sign
 
 import android.app.Activity
 import android.content.Intent
@@ -8,6 +8,7 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import org.sopt.myapplication.R
 import org.sopt.myapplication.databinding.ActivitySigninBinding
+import org.sopt.myapplication.ui.HomeActivity
 import org.sopt.myapplication.ui.base.BaseActivity
 
 class SignInActivity : BaseActivity<ActivitySigninBinding>(R.layout.activity_signin) {

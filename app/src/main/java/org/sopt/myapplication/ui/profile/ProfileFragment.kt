@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
+import org.sopt.myapplication.HomeData
 import org.sopt.myapplication.R
 import org.sopt.myapplication.databinding.FragmentProfileBinding
 import org.sopt.myapplication.ui.base.BaseFragment
@@ -14,9 +15,12 @@ import org.sopt.myapplication.ui.base.BaseFragment
 class ProfileFragment : BaseFragment<FragmentProfileBinding>(R.layout.fragment_profile) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         clickChangeButton()
+        initProfile()
     }
 
-
+    private fun initProfile(){
+        binding.user = HomeData("KwakHoTaek","ho-taek","개발잘하고싶다아아앙아",R.drawable.hotaek)
+    }
 
     private fun clickChangeButton(){
         childFragmentChange(R.id.fragment_container_recycler, FollowerFragment())
