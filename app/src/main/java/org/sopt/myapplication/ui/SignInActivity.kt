@@ -54,7 +54,7 @@ class SignInActivity : BaseActivity<ActivitySigninBinding>(R.layout.activity_sig
     }
 
     private fun clickSignUp(){
-        binding.btnSignUp.setOnClickListener {
+        binding.textSignUp.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
             resultLauncher.launch(intent)
         }

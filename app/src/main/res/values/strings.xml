@@ -2,7 +2,7 @@
     <string name="app_name">SOPT29Assignment</string>
     <string name="sopt_hub">SOPTHub</string>
     <string name="login">로그인</string>
-    <string name='id'>아이디</string>
+    <string name='id'>깃허브 아이디</string>
     <string name='password'>비밀번호</string>
     <string name="input_id">아이디를 입력해주세요</string>
     <string name="input_password">비밀번호를 입력해주세요</string>
@@ -16,4 +16,5 @@
     <string name="follower">팔로워 \n 목록</string>
     <string name="repository">레포지토리 \n 목록</string>
     <string name="detail_introduce">상세 소개</string>
+    <string name="no_id">계정이 없으신가요?</string>
 </resources>
