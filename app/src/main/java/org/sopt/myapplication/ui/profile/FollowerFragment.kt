@@ -1,4 +1,4 @@
-package org.sopt.myapplication.ui
+package org.sopt.myapplication.ui.profile
 
 
 import android.graphics.Color

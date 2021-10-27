@@ -6,8 +6,6 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
-import org.sopt.myapplication.ui.HomeActivity
 import org.sopt.myapplication.R
 import org.sopt.myapplication.databinding.ActivitySigninBinding
 import org.sopt.myapplication.ui.base.BaseActivity
@@ -44,10 +42,12 @@ class SignInActivity : BaseActivity<ActivitySigninBinding>(R.layout.activity_sig
             btnLogin.setOnClickListener {
                 if(etId.text.isNullOrBlank() || etPassword.text.isNullOrBlank()){
                     Toast.makeText(this@SignInActivity, "입력되지 않은 정보가 있습니다.", Toast.LENGTH_SHORT).show()
+                }else{
+                    Toast.makeText(this@SignInActivity, "곽호택님 환영합니다", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@SignInActivity, HomeActivity::class.java)
+                    startActivity(intent)
                 }
-                Toast.makeText(this@SignInActivity, "곽호택님 환영합니다", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this@SignInActivity, HomeActivity::class.java)
-                startActivity(intent)
+
             }
         }
 
