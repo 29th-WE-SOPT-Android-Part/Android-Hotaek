@@ -51,8 +51,6 @@ class FollowAdapter : RecyclerView.Adapter<FollowAdapter.FollowViewHolder>() {
             binding.apply{
                 follow = followData
                 binding.executePendingBindings()
-
-
             }
 
         }
