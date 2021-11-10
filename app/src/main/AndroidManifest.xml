@@ -12,16 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SOPT29Assignment">
         <activity
-            android:name=".ui.DetailActivity"
+            android:name=".ui.detail.DetailActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.SignUpActivity"
+            android:name=".ui.sign.SignUpActivity"
             android:exported="true" />
         <activity
             android:name=".ui.HomeActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.SignInActivity"
+            android:name=".ui.sign.SignInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

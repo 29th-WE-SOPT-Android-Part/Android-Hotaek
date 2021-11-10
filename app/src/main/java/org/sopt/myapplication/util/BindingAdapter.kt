@@ -2,13 +2,17 @@ package org.sopt.myapplication.util
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
+import com.bumptech.glide.Glide
 
 
 object BindingAdapter {
     @JvmStatic
     @BindingAdapter("imageBind")
     fun setImage(imageView: ImageView, imageUrl: Int) {
-        imageView.setImageResource(imageUrl)
+        Glide.with(imageView.context)
+            .load(imageUrl)
+            .circleCrop()
+            .into(imageView)
 
     }
 

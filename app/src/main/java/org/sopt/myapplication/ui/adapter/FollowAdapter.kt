@@ -3,12 +3,11 @@ package org.sopt.myapplication.ui.adapter
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import org.sopt.myapplication.data.FollowData
 import org.sopt.myapplication.databinding.ItemFollowerBinding
-import org.sopt.myapplication.ui.DetailActivity
+import org.sopt.myapplication.ui.detail.DetailActivity
 import java.util.*
 
 class FollowAdapter : RecyclerView.Adapter<FollowAdapter.FollowViewHolder>() {
@@ -52,8 +51,6 @@ class FollowAdapter : RecyclerView.Adapter<FollowAdapter.FollowViewHolder>() {
             binding.apply{
                 follow = followData
                 binding.executePendingBindings()
-
-
             }
 
         }
