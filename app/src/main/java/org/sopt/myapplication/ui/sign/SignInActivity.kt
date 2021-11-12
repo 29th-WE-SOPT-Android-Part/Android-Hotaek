@@ -3,10 +3,17 @@ package org.sopt.myapplication.ui.sign
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.sopt.myapplication.R
+import org.sopt.myapplication.data.api.ServiceCreator
+import org.sopt.myapplication.data.request.RequestSignInData
 import org.sopt.myapplication.databinding.ActivitySigninBinding
 import org.sopt.myapplication.ui.HomeActivity
 import org.sopt.myapplication.ui.base.BaseActivity
@@ -19,7 +26,7 @@ class SignInActivity : BaseActivity<ActivitySigninBinding>(R.layout.activity_sig
 
         clickLogin()
         clickSignUp()
-        setResultSignUp()
+
 
     }
 
@@ -44,21 +51,42 @@ class SignInActivity : BaseActivity<ActivitySigninBinding>(R.layout.activity_sig
                 if(etId.text.isNullOrBlank() || etPassword.text.isNullOrBlank()){
                     Toast.makeText(this@SignInActivity, "입력되지 않은 정보가 있습니다.", Toast.LENGTH_SHORT).show()
                 }else{
-                    Toast.makeText(this@SignInActivity, "곽호택님 환영합니다", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this@SignInActivity, HomeActivity::class.java)
-                    startActivity(intent)
+                    getSignIn()
                 }
 
             }
         }
+    }
 
+    private fun getSignIn(){
+        val requestSignInData = RequestSignInData(
+            email = binding.etId.text.toString(),
+            password = binding.etPassword.text.toString()
+        )
+
+        CoroutineScope(Dispatchers.IO).launch {
+            runCatching { ServiceCreator.signInService.getSignIn(requestSignInData) }
+                .onSuccess {
+                    Log.d("서버통신", "성공")
+                    withContext(Dispatchers.Main){
+                        Toast.makeText(this@SignInActivity, "로그인 성공!", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this@SignInActivity, HomeActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }
+                }
+                .onFailure {
+                    Log.d("서버통신", "실패")
+                }
+
+
+        }
     }
 
     private fun clickSignUp(){
         binding.textSignUp.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
-            resultLauncher.launch(intent)
-            finish()
+            startActivity(intent)
         }
     }
 }

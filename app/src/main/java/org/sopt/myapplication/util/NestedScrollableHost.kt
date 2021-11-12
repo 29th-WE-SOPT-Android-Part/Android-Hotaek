@@ -5,16 +5,16 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewConfiguration
+import android.widget.FrameLayout
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.viewpager2.widget.ViewPager2
 import androidx.viewpager2.widget.ViewPager2.ORIENTATION_HORIZONTAL
 import kotlin.math.absoluteValue
 import kotlin.math.sign
 
-class NestedScrollableHost : ConstraintLayout {
+class NestedScrollableHost : FrameLayout {
     constructor(context: Context) : super(context)
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
-
     private var touchSlop = 0
     private var initialX = 0f
     private var initialY = 0f
