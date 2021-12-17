@@ -28,10 +28,5 @@ object SoptSharedPreference {
             .apply()
     }
 
-    fun clearStorage(context: Context){
-        val preferences = context.getSharedPreferences(STORAGE_KEY, Context.MODE_PRIVATE)
-        preferences.edit()
-            .clear()
-            .apply()
-    }
+
 }

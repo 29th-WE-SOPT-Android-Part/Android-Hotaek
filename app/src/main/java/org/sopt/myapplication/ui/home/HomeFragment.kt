@@ -34,8 +34,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     }
 
     private fun btnSetting(){
-        val intent = Intent(requireActivity(), SettingActivity::class.java)
-        startActivity(intent)
+       binding.imgSetting.setOnClickListener {
+           val intent = Intent(requireActivity(), SettingActivity::class.java)
+           startActivity(intent)
+       }
+
     }
 
     private fun initTab(){

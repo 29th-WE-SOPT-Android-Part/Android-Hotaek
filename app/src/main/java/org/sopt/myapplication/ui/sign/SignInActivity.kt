@@ -24,9 +24,11 @@ class SignInActivity : BaseActivity<ActivitySigninBinding>(R.layout.activity_sig
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         clickLogin()
         clickSignUp()
         autoLogin()
+
     }
 
     private fun setResultSignUp() {
