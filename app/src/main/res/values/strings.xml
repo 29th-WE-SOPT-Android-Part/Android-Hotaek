@@ -27,4 +27,5 @@
     <string name="on_boarding_two">SOPTHub에서 즐거운 시간 \n 보내시길 바랍니다!</string>
     <string name="on_boarding_three">SOPTHub를 \n 시작해볼까요?</string>
     <string name="next">다음</string>
+    <string name="auto_login_remove">자동로그인 해제</string>
 </resources>

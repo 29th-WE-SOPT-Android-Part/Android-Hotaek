@@ -1,5 +1,6 @@
 package org.sopt.myapplication.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import org.sopt.myapplication.R
 import org.sopt.myapplication.databinding.FragmentHomeBinding
 import org.sopt.myapplication.ui.adapter.HomeFragmentViewPagerAdapter
 import org.sopt.myapplication.ui.base.BaseFragment
+import org.sopt.myapplication.ui.setting.SettingActivity
 
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
@@ -17,6 +19,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         initAdapter()
         initTab()
+        btnSetting()
     }
 
 
@@ -28,6 +31,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         homeFragmentViewPagerAdapter.fragments.addAll(fragmentList)
 
         binding.vpHomeTab.adapter = homeFragmentViewPagerAdapter
+    }
+
+    private fun btnSetting(){
+        val intent = Intent(requireActivity(), SettingActivity::class.java)
+        startActivity(intent)
     }
 
     private fun initTab(){
