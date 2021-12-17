@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SOPT29Assignment">
         <activity
+            android:name=".ui.setting.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.onboarding.OnBoardingActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".ui.detail.DetailActivity"
             android:exported="true" />
         <activity
@@ -22,13 +34,7 @@
             android:exported="true" />
         <activity
             android:name=".ui.sign.SignInActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

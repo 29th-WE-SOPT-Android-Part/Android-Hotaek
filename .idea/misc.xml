@@ -9,6 +9,7 @@
         <entry key="..\:/29th-SOPT/app/src/main/res/layout/activity_signin.xml" value="0.2" />
         <entry key="..\:/Android-Hotaek/app/src/main/res/drawable/button_shape.xml" value="0.14583333333333334" />
         <entry key="..\:/Android-Hotaek/app/src/main/res/drawable/ic_android_black_24dp.xml" value="0.26979166666666665" />
+        <entry key="..\:/Android-Hotaek/app/src/main/res/drawable/ic_launcher_background.xml" value="0.26564102564102565" />
         <entry key="..\:/Android-Hotaek/app/src/main/res/drawable/login_border.xml" value="0.25092592592592594" />
         <entry key="..\:/Android-Hotaek/app/src/main/res/drawable/menu_selector.xml" value="0.26979166666666665" />
         <entry key="..\:/Android-Hotaek/app/src/main/res/drawable/profile_shape.xml" value="0.26979166666666665" />
@@ -21,13 +22,18 @@
         <entry key="..\:/Android-Hotaek/app/src/main/res/font/noto_sans_kr_medium.xml" value="0.2838541666666667" />
         <entry key="..\:/Android-Hotaek/app/src/main/res/font/noto_sans_medium.xml" value="0.2838541666666667" />
         <entry key="..\:/Android-Hotaek/app/src/main/res/layout/activity_detail.xml" value="0.25364583333333335" />
-        <entry key="..\:/Android-Hotaek/app/src/main/res/layout/activity_home.xml" value="0.4" />
+        <entry key="..\:/Android-Hotaek/app/src/main/res/layout/activity_home.xml" value="0.1412037037037037" />
+        <entry key="..\:/Android-Hotaek/app/src/main/res/layout/activity_on_boarding.xml" value="0.136" />
+        <entry key="..\:/Android-Hotaek/app/src/main/res/layout/activity_setting.xml" value="0.176" />
         <entry key="..\:/Android-Hotaek/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
         <entry key="..\:/Android-Hotaek/app/src/main/res/layout/activity_signin.xml" value="0.264" />
         <entry key="..\:/Android-Hotaek/app/src/main/res/layout/fragment_follower.xml" value="0.25364583333333335" />
-        <entry key="..\:/Android-Hotaek/app/src/main/res/layout/fragment_home.xml" value="0.25364583333333335" />
+        <entry key="..\:/Android-Hotaek/app/src/main/res/layout/fragment_home.xml" value="0.136" />
         <entry key="..\:/Android-Hotaek/app/src/main/res/layout/fragment_home_follower.xml" value="0.16799999999999998" />
         <entry key="..\:/Android-Hotaek/app/src/main/res/layout/fragment_home_following.xml" value="0.1296875" />
+        <entry key="..\:/Android-Hotaek/app/src/main/res/layout/fragment_on_boarding_one.xml" value="0.176" />
+        <entry key="..\:/Android-Hotaek/app/src/main/res/layout/fragment_on_boarding_three.xml" value="0.25364583333333335" />
+        <entry key="..\:/Android-Hotaek/app/src/main/res/layout/fragment_on_boarding_two.xml" value="0.2390625" />
         <entry key="..\:/Android-Hotaek/app/src/main/res/layout/fragment_profile.xml" value="0.152" />
         <entry key="..\:/Android-Hotaek/app/src/main/res/layout/fragment_repository.xml" value="0.2" />
         <entry key="..\:/Android-Hotaek/app/src/main/res/layout/item_follower.xml" value="0.264" />

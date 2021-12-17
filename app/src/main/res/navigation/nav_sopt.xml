@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_sopt"
+    app:startDestination="@id/onBoardingOneFragment">
+
+    <fragment
+        android:id="@+id/onBoardingOneFragment"
+        android:name="org.sopt.myapplication.ui.onboarding.OnBoardingOneFragment"
+        android:label="OnBoardingOneFragment" >
+        <action
+            android:id="@+id/action_onBoardingOneFragment_to_onBoardingTwoFragment"
+            app:destination="@id/onBoardingTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingTwoFragment"
+        android:name="org.sopt.myapplication.ui.onboarding.OnBoardingTwoFragment"
+        android:label="OnBoardingTwoFragment" >
+        <action
+            android:id="@+id/action_onBoardingTwoFragment_to_onBoardingThreeFragment"
+            app:destination="@id/onBoardingThreeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingThreeFragment"
+        android:name="org.sopt.myapplication.ui.onboarding.OnBoardingThreeFragment"
+        android:label="OnBoardingThreeFragment" />
+</navigation>
