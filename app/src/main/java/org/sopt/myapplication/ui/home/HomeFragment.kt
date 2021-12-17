@@ -24,14 +24,14 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     private fun initAdapter(){
         val fragmentList = listOf(HomeFollowingFragment(),HomeFollowerFragment())
 
-        homeFragmentViewPagerAdapter = HomeFragmentViewPagerAdapter(this)
+        homeFragmentViewPagerAdapter = HomeFragmentViewPagerAdapter(requireActivity())
         homeFragmentViewPagerAdapter.fragments.addAll(fragmentList)
 
         binding.vpHomeTab.adapter = homeFragmentViewPagerAdapter
     }
 
     private fun initTab(){
-        val tabLabel = listOf("첫 번째", "두 번쨰")
+        val tabLabel = listOf("첫 번째", "두 번째")
 
         TabLayoutMediator(binding.tlHome, binding.vpHomeTab) {tab, position ->
             tab.text = tabLabel[position]
